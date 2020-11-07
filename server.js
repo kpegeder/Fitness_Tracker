@@ -17,13 +17,12 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/workout", {
   useNewUrlParser: true,
 });
 
-// TODO
-
 // Routes
 const html = require("./routes/html.js");
-const api = require("./routes/api.js");
+const api = require("./routes/apiRoutes.js");
 
 app.use(html);
+app.use(api);
 
 app.listen(PORT, () => {
   console.log(`App running on port ${PORT}!`);
