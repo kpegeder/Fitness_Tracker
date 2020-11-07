@@ -2,13 +2,15 @@ const router = require("express").Router();
 const Workout = require("../models/Workout");
 
 router.get("/api/workouts", (req, res) => {
-  Workout.find({}, (error, data) => {
-    if (error) {
-      res.send(error);
-    } else {
+  Workout.find({})
+    .sort({ _id: -1 })
+    .limit(1)
+    .then((data) => {
       res.json(data);
-    }
-  });
+    })
+    .catch((err) => {
+      res.json(err);
+    });
 });
 
 router.post("/api/workouts/", ({ body }, res) => {
