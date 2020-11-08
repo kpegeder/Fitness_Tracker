@@ -6,7 +6,7 @@
 
 Github Code URL: https://github.com/kpegeder/fitness-tracker
 
-Deployed Code: http://kp-fitness-tracker.herokuapp.com/
+Deployed Code: https://kp-fitness-tracker.herokuapp.com/
 
 ## Description
 
